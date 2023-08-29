@@ -1,4 +1,4 @@
-module github.com/dop251/goja
+module github.com/voutila/goja
 
 go 1.16
 
