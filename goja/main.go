@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/voutilad/goja"
-	"github.com/voutilad/goja_nodejs/console"
-	"github.com/voutilad/goja_nodejs/require"
+	"github.com/dop251/goja_nodejs/console"
+	"github.com/dop251/goja_nodejs/require"
 )
 
 var cpuprofile = flag.String("cpuprofile", "", "write cpu profile to file")
