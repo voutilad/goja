@@ -9,10 +9,8 @@
 package unistring
 
 import (
-	"reflect"
 	"unicode/utf16"
 	"unicode/utf8"
-	"unsafe"
 )
 
 const (
@@ -98,10 +96,7 @@ func NewFromRunes(s []rune) String {
 
 func FromUtf16(b []uint16) String {
 	var str string
-	hdr := (*reflect.StringHeader)(unsafe.Pointer(&str))
-	hdr.Data = uintptr(unsafe.Pointer(&b[0]))
-	hdr.Len = len(b) * 2
-
+	panic("FromUtf16 unimplemented")
 	return String(str)
 }
 
@@ -118,20 +113,6 @@ func (s String) AsUtf16() []uint16 {
 		return nil
 	}
 
-	var a []uint16
-	raw := string(s)
-
-	sliceHeader := (*reflect.SliceHeader)(unsafe.Pointer(&a))
-	sliceHeader.Data = (*reflect.StringHeader)(unsafe.Pointer(&raw)).Data
-
-	l := len(raw) / 2
-
-	sliceHeader.Len = l
-	sliceHeader.Cap = l
-
-	if a[0] == BOM {
-		return a
-	}
-
+	panic("AsUtf16 unimplemented")
 	return nil
 }
