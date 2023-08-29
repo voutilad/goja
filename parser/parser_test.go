@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/dop251/goja/ast"
-	"github.com/dop251/goja/file"
-	"github.com/dop251/goja/token"
-	"github.com/dop251/goja/unistring"
+	"github.com/voutilad/goja/ast"
+	"github.com/voutilad/goja/file"
+	"github.com/voutilad/goja/token"
+	"github.com/voutilad/goja/unistring"
 )
 
 func firstErr(err error) error {
